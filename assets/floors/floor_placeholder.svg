@@ -1,0 +1,15 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="520" rx="26" fill="#191f28"/>
+  <path d="M166 360L430 132L744 242L482 426L166 360Z" fill="#313943" stroke="#ff3333" stroke-width="3"/>
+  <path d="M430 132V298M744 242V360M482 426V298M166 360V245" stroke="#66727e" stroke-width="3"/>
+  <path d="M166 245L430 70L744 182L744 242L430 132L166 360V245Z" fill="#d7d4c8"/>
+  <path d="M430 70V132M744 182V242" stroke="#9ca1a6" stroke-width="3"/>
+  <path d="M235 330L360 230L492 280L368 376L235 330Z" fill="#4b5664"/>
+  <path d="M505 275L623 210L702 244L586 325L505 275Z" fill="#4b5664"/>
+  <path d="M384 386L507 292L604 332L480 412L384 386Z" fill="#6d5945"/>
+  <path d="M257 310L357 232M318 348L419 268M520 272L625 210M579 313L682 241" stroke="#c8d0d8" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="218" cy="350" r="12" fill="#ff3333"/>
+  <circle cx="702" cy="250" r="10" fill="#ff3333"/>
+  <text x="56" y="86" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="300" letter-spacing="12">PLANTA</text>
+  <text x="60" y="126" fill="#ff3333" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">AXONOMETRICA</text>
+</svg>
