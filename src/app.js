@@ -292,6 +292,7 @@ function showAdminLogin() {
   adminDialog.classList.remove("panel-mode");
   adminLogin.hidden = false;
   adminPanel.hidden = true;
+  adminPanel.inert = true;
   adminPasswordInput.value = "";
 }
 
@@ -300,6 +301,7 @@ function showAdminPanel() {
   adminDialog.classList.remove("login-mode");
   adminLogin.hidden = true;
   adminPanel.hidden = false;
+  adminPanel.inert = false;
   state.pendingUnitOverrides = {};
   renderAdminFloorOptions();
   renderSelectedAdminFloorUnits();
