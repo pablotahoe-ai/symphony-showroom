@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symphony Showroom</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="https://www.grupodeveloper.com" target="_blank" rel="noreferrer" aria-label="Ir a Grupo Developer">
+          <img src="./assets/logos/logo-header.png" alt="Sumar Construcciones" />
+        </a>
+        <p class="header-address">Alsina 2547, Mar del Plata</p>
+        <div class="header-actions">
+          <section class="agent-card header-agent">
+            <div class="agent-copy">
+              <span>Ventas</span>
+              <strong>Developer Symphony</strong>
+              <a id="salesPhone" href="https://wa.me/5492235254857" target="_blank" rel="noreferrer">2235 25-4857</a>
+            </div>
+            <a class="contact-button" id="contactButton" target="_blank" rel="noreferrer">
+              <span>Contactar</span>
+            </a>
+          </section>
+          <button class="icon-button" id="menuButton" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <main class="showroom">
+        <section class="visual-stage" aria-label="Vista del edificio">
+          <div class="building-summary" aria-label="Caracteristicas del edificio">
+            <h1 id="summaryTitle">SUMAR VI - MAUI</h1>
+            <ul id="summaryFeatures"></ul>
+            <figure class="plan-preview">
+              <img src="./assets/plans/typical-floor-plan.png" alt="Plano de planta tipo" />
+            </figure>
+          </div>
+
+          <div class="building-wrap">
+            <div class="scan-line" id="scanLine"></div>
+            <img class="building-render" id="buildingRender" src="./assets/building/building-main-00.png" alt="Edificio Sumar VI - Maui" />
+            <div class="building" id="building"></div>
+            <div class="building-arrows" aria-label="Cambiar piso">
+              <button class="arrow-button" id="floorUp" type="button" aria-label="Piso superior">&uarr;</button>
+              <button class="arrow-button" id="floorDown" type="button" aria-label="Piso inferior">&darr;</button>
+            </div>
+          </div>
+
+          <div class="floor-selector" id="floorSelector" aria-label="Selector de pisos"></div>
+        </section>
+
+        <aside class="info-panel" aria-label="Informacion comercial">
+          <div class="residence-title">
+            <div>
+              <h2 id="panelProjectName">SUMAR VI - MAUI</h2>
+              <p id="panelProjectSubtitle">RESIDENCIAS</p>
+            </div>
+            <span class="status-pill" id="statusPill">Inicio</span>
+          </div>
+
+          <div class="axo-frame">
+            <img id="axoImage" src="./assets/floors/floor_placeholder.svg" alt="Axonometrica del piso" />
+          </div>
+
+          <section class="unit-picker">
+            <p id="panelTitle">INFO</p>
+            <div id="unitSelector"></div>
+          </section>
+
+          <section class="info-list" id="infoList"></section>
+
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="./src/app.js"></script>
+
+    <dialog class="admin-dialog" id="adminDialog" aria-label="Panel privado">
+      <form class="admin-card" id="adminLogin" method="dialog">
+        <button class="modal-close" type="button" data-admin-close aria-label="Cerrar">×</button>
+        <span class="admin-eyebrow">Acceso privado</span>
+        <h2>Gestionar unidades</h2>
+        <label>
+          <span>Contraseña</span>
+          <input id="adminPassword" type="password" autocomplete="current-password" />
+        </label>
+        <div class="password-help">
+          <span>Pregunta: Internet ofi anterior</span>
+          <a href="mailto:pablo@grupodeveloper.com?subject=Solicitud%20de%20contrase%C3%B1a%20Developer%20Symphony&body=Hola%20Pablo,%20necesito%20recuperar%20la%20contrase%C3%B1a%20de%20acceso%20comercial%20de%20Developer%20Symphony.">Pedir contraseña</a>
+        </div>
+        <p class="admin-error" id="adminError" aria-live="polite"></p>
+        <button class="admin-primary" type="submit">Ingresar</button>
+      </form>
+
+      <section class="admin-card admin-panel" id="adminPanel" hidden>
+        <button class="modal-close" type="button" data-admin-close aria-label="Cerrar">×</button>
+        <div class="admin-head">
+          <div>
+            <span class="admin-eyebrow">Panel comercial</span>
+            <h2>Estados por departamento</h2>
+          </div>
+          <label class="admin-floor">
+            <span>Piso</span>
+            <select id="adminFloor"></select>
+          </label>
+        </div>
+        <div class="admin-units" id="adminUnits"></div>
+        <div class="admin-actions">
+          <p id="adminSaveStatus" aria-live="polite">Sin cambios pendientes.</p>
+          <button class="admin-primary" id="adminSave" type="button">Guardar cambios</button>
+        </div>
+      </section>
+    </dialog>
+  </body>
+</html>
